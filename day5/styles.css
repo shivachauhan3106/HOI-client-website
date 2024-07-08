@@ -1,0 +1,304 @@
+/* styles.css */
+
+/* Reset some basic styles */
+body, h1, p, ul, li, a, input, textarea, button, form {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bcc5fe7a; /* Blue background */
+    padding: 0.3rem;
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-logo img {
+    margin-left:25px;
+    margin-top: 5px;
+    height: 70px; /* Adjust as necessary */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links a {
+    margin-right: 20px;
+    font-family: cursive;
+    color: #ffffff; /* White text */
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    transition: background 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #0056b3;
+    background-color: #ffffff; /* Red on hover */
+    border-radius: 9px;
+    box-shadow: 0 3px 15px rgb(24, 221, 239);
+}
+/* Styling for the active link */
+.navbar-links a.active {
+    background-color: #0056b3; /* Highlight with a blue background */
+    color: #ffffff; /* White text */
+    border-radius: 5px;
+}
+
+/* Section styling */
+section {
+    padding: 101rem 2rem 2rem 2rem;
+    min-height: 100vh;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+
+/* Home Section */
+#home {
+    
+       position: relative;
+        width: 70%;
+        object-fit: cover;
+        justify-content:flex-end;
+        height: 65vh;
+        background: url(bg.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items:center;
+        padding: 70px 15% 0;
+    }
+
+
+.home-content p {
+    font-family: cursive;
+    margin-left: 50%;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+.home-button {
+    background-color: #ff4136; /* Red button */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left:900px;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 1px 15px 10px white; /* Blue on hover */
+}
+
+/* About Section */
+#about {
+     position: relative;
+    width: 70%;
+    object-fit: cover;
+    justify-content:center;
+    height: 65vh;
+    background: url(bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items:center;
+    padding: 70px 15% 0;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content p {
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: cursive;
+}
+
+/* Services Section */
+#services {
+    position: relative;
+    width: 70%;
+    object-fit: cover;
+    justify-content:center;
+    height: 65vh;
+    background: url(bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items:center;
+    padding: 70px 15% 0;
+}
+
+.services-content {
+    max-width: 600px;
+}
+
+.services-content p {
+    font-size: 2rem;
+    color: #ffffff;
+    font-family: cursive;
+}
+
+.services-button {
+    background-color: #ff4136; /* Red button */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left:900px;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.services-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 1px 15px 10px white;  /* Blue on hover */
+}
+
+/* Contact Section */
+#contact {
+    position: relative;
+    width: 70%;
+    object-fit: cover;
+    justify-content:center;
+    height: 65vh;
+    background: url(bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items:center;
+    padding: 70px 15% 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-form form {
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #ffffff;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background: rgb(59, 74, 176);
+        backdrop-filter: blur(10px);
+        background: linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
+        background: linear-gradient(to left, rgb(18, 107, 216) 0%, rgb(234, 123, 123) 100%);    
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #ffffff;
+    font-family: cursive;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width:500px;
+    padding: 1rem ;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: #ff4136; /* Red button */
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left:900px;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 1px 15px 10px white; /* Blue on hover */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333; /* Dark grey background */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer a {
+    color: #ff4136; /* Red text */
+    text-decoration: underline;
+}
+
+/* Privacy Policy Page */
+.policy {
+    padding: 2rem;
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    section {
+        padding: 5rem 1rem 1rem 1rem;
+    }
+
+    .about-content, .services-content, .contact-form {
+        padding: 1rem;
+    }
+}

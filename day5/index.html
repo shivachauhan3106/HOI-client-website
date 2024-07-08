@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOI - House of Innovation</title>
+    <link rel="icon" type="image" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="logo.png" alt="Company Logo">
+        </div>
+        <ul class="navbar-links">
+            <li><a href="#home" target="_parent">Home</a></li>
+            <li><a href="#about" target="_parent">About</a></li>
+            <li><a href="#services" target="_parent">Services</a></li>
+            <li><a href="#contact" target="_parent">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+            <p>Welcome to our website</p>
+            <p>Your journey starts here</p>
+            <button class="home-button">Get Started</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <p>Welcome to the House of Innovation (HOI), where cutting-edge technology meets creative solutions. We specialize in AI chatbot optimization and custom AI solutions designed to transform your digital experience. Our mission is to empower businesses with innovative, tailored AI services that drive efficiency and enhance customer interactions. At HOI, we combine deep expertise with a commitment to excellence, delivering state-of-the-art technology solutions that propel your business forward. Join us on a journey of innovation and let us help you navigate the future of technology.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="services-content">
+            <p>Explore our range of services designed to meet your needs.</p>
+            <button class="services-button">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-form">
+            <form action="https://formspree.io/f/manwyzjw" method="post">
+                <label for="name">Name:</label>
+                <input  type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="company">Company:</label>
+                <input type="text" id="company" name="company">
+
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2024 HOI-House Of Inovation  . Allrights reserved  .Created By SHIVA CHAUHAN</p>
+        <a href="policy.html" target="_blank">Privacy Policy</a>
+    </footer>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all links with hashes
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            // Iterate over each link
+            links.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Remove existing active classes
+                    links.forEach(link => link.classList.remove('active'));
+
+                    // Add the active class to the clicked link
+                    this.classList.add('active');
+
+                    // Store the hash
+                    const hash = this.getAttribute('href');
+
+                    // Using scrollIntoView with smooth behavior
+                    document.querySelector(hash).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // For browsers that don't support scrollIntoView
+                    if (history.pushState) {
+                        history.pushState(null, null, hash);
+                    } else {
+                        window.location.hash = hash;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
